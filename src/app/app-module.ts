@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatSortModule } from '@angular/material/sort';
 import { MatDividerModule } from '@angular/material/divider';
 import { Home } from './home/home';
 import { Profile } from './profile/profile';
@@ -39,6 +40,7 @@ import { LoadPayments } from './load-payments/load-payments';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatSortModule,
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
