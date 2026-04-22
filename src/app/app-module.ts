@@ -18,9 +18,22 @@ import { Login } from './login/login';
 import { Dashboard } from './dashboard/dashboard';
 import { Students } from './students/students';
 import { Payments } from './payments/payments';
+import { LoadStudents } from './load-students/load-students';
+import { LoadPayments } from './load-payments/load-payments';
 
 @NgModule({
-  declarations: [App, AdminTemplate, Home, Profile, Login, Dashboard, Students, Payments],
+  declarations: [
+    App,
+    AdminTemplate,
+    Home,
+    Profile,
+    Login,
+    Dashboard,
+    Students,
+    Payments,
+    LoadStudents,
+    LoadPayments,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

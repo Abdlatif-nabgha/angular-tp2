@@ -6,6 +6,8 @@ import { Login } from './login/login';
 import { Dashboard } from './dashboard/dashboard';
 import { Students } from './students/students';
 import { Payments } from './payments/payments';
+import { LoadStudents } from './load-students/load-students';
+import { LoadPayments } from './load-payments/load-payments';
 
 const routes: Routes = [
   { path: "", component: Home },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: "dashboard", component: Dashboard },
   { path: "students", component: Students },
   { path: "payments", component: Payments },
+  { path: "load-students", component: LoadStudents },
+  { path: "load-payments", component: LoadPayments },
 ];
 
 @NgModule({
