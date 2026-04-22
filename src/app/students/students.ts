@@ -40,4 +40,9 @@ export class Students implements OnInit, AfterViewInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+
+  filterStudent(event: Event): void {
+    let value = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = value;
+  }
 }
