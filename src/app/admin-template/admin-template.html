@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/">Home</button>
+    <button mat-button routerLink="/profile">Profile</button>
+    <button mat-button [matMenuTriggerFor]="importMenu">
+        <mat-icon iconPositionEnd>arrow_drop_down</mat-icon>
+        Import
+    </button>
+    <mat-menu #importMenu>
+        <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+        <button mat-menu-item routerLink="/students">Students</button>
+        <button mat-menu-item routerLink="/payments">Payments</button>
+    </mat-menu>
+    <button mat-raised-button color="accent" routerLink="/login">Login</button>
+</mat-toolbar>
+
+<mat-drawer-container>
+    <mat-drawer #drawer mode="side" position="start" opened="true">
+        <mat-nav-list>
+            <mat-list-item routerLink="/dashboard">
+                <mat-icon matListItemIcon>dashboard</mat-icon>
+                <span matListItemTitle>Dashboard</span>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/students">
+                <mat-icon matListItemIcon>school</mat-icon>
+                <span matListItemTitle>Students</span>
+            </mat-list-item>
+            
+            <mat-list-item routerLink="/payments">
+                <mat-icon matListItemIcon>payment</mat-icon>
+                <span matListItemTitle>Payments</span>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <div style="min-height: 600px;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
